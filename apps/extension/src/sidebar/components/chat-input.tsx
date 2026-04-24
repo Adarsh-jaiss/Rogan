@@ -17,7 +17,7 @@ export default function ChatInput() {
     }
 
     return (
-        <div className="w-full border border-gray-200 rounded-xl p-2 bg-white">
+        <div className="w-full border border-gray-200 rounded-xl p-2 bg-custom-light">
             <Textarea
                 value={text}
                 onChange={(e) => setText(e.target.value)}
