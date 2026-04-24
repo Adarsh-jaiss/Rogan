@@ -195,6 +195,7 @@ http://localhost:5173
 
 ```bash
 pnpm --filter extension build
+pnpm --filter @rogan/extension add -D vite
 ```
 
 Output will be generated in:

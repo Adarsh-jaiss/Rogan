@@ -1,8 +1,25 @@
 {
     "manifest_version": 3,
-    "name": "Rogan Extension",
+    "name": "Rogan",
     "version": "1.0.0",
-    "action": {
-        "default_popup": "index.html"
-    }
+    "action": {},
+    "side_panel":{
+        "default_path":"index.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "sidePanel"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
 }
