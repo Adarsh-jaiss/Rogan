@@ -1,3 +1,28 @@
+# api 
+
+1. https://www.linkedin.com/voyager/api/graphql?variables=(pageKey  -> used for rendering ui
+2. https://www.linkedin.com/voyager/api/graphql?variables=(vieweeProfileUrn -> used for checking limiations and what features access i have access to
+3. voyagerMessagingDashAffiliatedMailboxes -> fetching the structure of the mailbox and the conversations in it
+4. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Turborepo starter
 
 This Turborepo starter is maintained by the Turborepo core team.

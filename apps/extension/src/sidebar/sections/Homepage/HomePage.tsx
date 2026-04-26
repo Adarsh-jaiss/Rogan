@@ -3,22 +3,14 @@ import ReactDOM from 'react-dom/client'
 
 import { injectContentScript } from '@/lib/injectScript'
 import { getActiveTab } from '@/lib/tabs'
-import ChatInput from '../components/chat-input'
+import ChatInput from './components/chat-input'
+import ActivityLogs from './components/activity-logs'
+import { ensureLinkedInTab } from '@/lib/tabs'
+
 function HomePage() {
     const sayHello = async () => {
         try {
-            const tabs = await getActiveTab()
-
-            if (!tabs.length) {
-                console.log("no tabs found")
-                return
-            }
-
-            const tabId = tabs[0].id
-            if (!tabId) {
-                console.log("tab id is undefined")
-                return
-            }
+           const tabId = await ensureLinkedInTab();
 
             await injectContentScript(tabId);
 
@@ -37,6 +29,7 @@ function HomePage() {
         <>
             <div className='p-4 pl-6 pr-6'>
                 <ChatInput />
+                <ActivityLogs />
             </div>
         </>
     )

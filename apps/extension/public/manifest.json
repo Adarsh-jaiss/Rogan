@@ -10,7 +10,11 @@
         "service_worker": "background.js"
     },
     "permissions": [
-        "sidePanel"
+        "sidePanel",
+        "storage",
+        "activeTab",
+        "scripting",
+        "tabs"
     ],
     "content_scripts": [
         {
